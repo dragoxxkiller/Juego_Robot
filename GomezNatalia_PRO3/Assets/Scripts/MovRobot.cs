@@ -29,7 +29,7 @@ public class MovRobot : MonoBehaviour
 
         Speed = 3.5f;
         jumpForce = 10f;
-        maxSpeed = 15f;
+       // maxSpeed = 5f;
 
 
     }
@@ -131,17 +131,18 @@ public class MovRobot : MonoBehaviour
     }
     void Correr()
     {
-        while (Input.GetKeyDown(KeyCode.LeftControl))
+       if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             animator.SetBool("Run", true);
         }
-        /*else if (Input.GetKeyUp(KeyCode.LeftControl))
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             animator.SetBool("Run", false);
-        }*/
-        rb.velocity = new Vector2(desplX * maxSpeed, rb.velocity.y);
+        }
+        /*rb.velocity = new Vector2(desplX * maxSpeed, rb.velocity.y);
         speed = rb.velocity.x;
-        speed = Mathf.Abs(speed);
+        speed = Mathf.Abs(speed);*/
+        speed = 15f;
     }
 
     void Crouch()
