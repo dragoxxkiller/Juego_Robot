@@ -188,4 +188,13 @@ public class MovRobot : MonoBehaviour
         }
 
     }
+
+    private void OnCollision2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            SceneManager.LoadScene("Niv2");
+        }
+
+    }
 }
