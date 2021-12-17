@@ -6,8 +6,6 @@ public class Movbala : MonoBehaviour
 {
 
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +20,7 @@ public class Movbala : MonoBehaviour
     {
 
 
-        transform.Translate(Vector3.up * 6f * Time.deltaTime);
+        transform.Translate(Vector2.up * 6f * Time.deltaTime);
 
     }
 
@@ -33,8 +31,8 @@ public class Movbala : MonoBehaviour
             collision.gameObject.SendMessage("Death");
         }
 
-        //Destruyo la bala, independientemente de con quién ha chocado
-        Destroy(gameObject);
+        
+        //Destroy(gameObject);
     }
 
 

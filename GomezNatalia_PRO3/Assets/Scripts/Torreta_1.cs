@@ -11,14 +11,14 @@ public class Torreta_1 : MonoBehaviour
     [SerializeField] Transform cannon;
    
     [SerializeField] GameObject bala;
-    [SerializeField] GameObject Robot;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
 
-
+       
 
         player = GameObject.Find("Robot").transform;
 
@@ -37,20 +37,18 @@ public class Torreta_1 : MonoBehaviour
 
     }
 
-
-    public void Activar()
+   
+  public void ActivarTorreta()
     {
         animator.SetBool("EnZona", true);
     }
 
-    public void Desactivar()
+    public void DesactivarTorreta()
     {
         animator.SetBool("EnZona", false);
     }
     void Disparar()
     {
-        print("FUEGO");
-       
         Instantiate(bala, cannon);
     }
 
